@@ -1,0 +1,43 @@
+
+body {
+    background-color: #ECF1F5;
+    .editar,
+    .borrar {
+        padding: 6px 10px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .editar {
+        background-color: #007bff;
+    }
+
+    .borrar {
+        background-color: #dc3545;
+    }
+
+    .site-name {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #AAE1E9;
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+    }
+
+    .nav-link {
+        font-weight: bold;
+    }
+    .header{
+        background-color: #17a2b8;
+    }

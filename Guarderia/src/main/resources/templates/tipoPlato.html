@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tipos de Plato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <header th:replace="plantilla/template::header"></header> 
+    <h1>Tipos de Plato</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generan las filas con los datos de los tipos de plato -->
+            <tr th:each="tipoPlato : ${tiposPlato}">
+                <td th:text="${tipoPlato.idTipoPlato}"></td>
+                <td th:text="${tipoPlato.nombre}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

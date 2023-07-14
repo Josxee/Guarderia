@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <header th:replace="plantilla/template::header"></header> 
+    <h1>Menu</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id Menu</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generan las filas con los datos de los niños -->
+            <tr th:each="menu : ${menu}">
+                <td th:text="${menu.IDMENU}"></td>
+                <td th:text="${menu.NOMBRE}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

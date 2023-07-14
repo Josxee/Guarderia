@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pagos</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/estilos.css"/> 
+    </head>
+    <body>
+        <header th:replace="plantilla/template::header"></header> 
+        <h1>Pagos</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id pago</th>
+                    <th>Cedula Autorizado</th>
+                    <th>Monto mensual</th>
+                    <th>Numero cuenta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se generan las filas con los datos de los niños -->
+                <tr th:each="pago : ${pago}">
+                    <td th:text="${pago.IDPAGO}"></td>
+                    <td th:text="${pago.CEDULAAUTORIZADO}"></td>
+                    <td th:text="${pago.MONTOMENSUALFIJO}"></td>
+                    <td th:text="${pago.NUMEROCUENTA}"></td>
+                </tr>
+            </tbody>
+        </table>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

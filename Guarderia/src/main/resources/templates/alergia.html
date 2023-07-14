@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alergias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <header th:replace="plantilla/template::header"></header> 
+    <h1>Alergias</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Id Plato</th>
+                <th>Id Ingrediente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generan las filas con los datos de los niños -->
+            <tr th:each="alergia : ${alergia}">
+                <td th:text="${alergia.IDALERGIA}"></td>
+                <td th:text="${alergia.CEDULANINO}"></td>
+                <td th:text="${alergia.IDINGREDIENTE}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

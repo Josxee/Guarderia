@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Niños</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <header th:replace="plantilla/template::header"></header> 
+    <h1>Niños</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Fecha de Ingreso</th>
+                <th>Fecha de Baja</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generan las filas con los datos de los niños -->
+            <tr th:each="nino : ${nino}">
+                <td th:text="${nino.CEDULANINO}"></td>
+                <td th:text="${nino.NOMBRENINO}"></td>
+                <td th:text="${nino.PRIMERAPELLIDONINO}"></td>
+                <td th:text="${nino.SEGUNDOAPELLIDONINO}"></td>
+                <td th:text="${nino.FECHANACIMIENTO}"></td>
+                <td th:text="${nino.FECHAINGRESO}"></td>
+                <td th:text="${nino.FECHABAJA}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

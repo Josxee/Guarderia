@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ingrediente</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/estilos.css"/>
+    </head>
+    <body>
+        <header th:replace="plantilla/template::header"></header> 
+        <h1>Ingrediente</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Id Tipo ingrediente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se generan las filas con los datos de los niños -->
+                <tr th:each="ingrediente : ${ingrediente}">
+                    <td th:text="${ingrediente.IDINGREDIENTE}"></td>
+                    <td th:text="${ingrediente.NOMBRE}"></td>
+                    <td th:text="${ingrediente.IDTIPOINGREDIENTE}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

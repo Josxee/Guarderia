@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autorizado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <header th:replace="plantilla/template::header"></header> 
+    <h1>Autorizado</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Responsable de Pago</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generan las filas con los datos de los niños -->
+            <tr th:each="autorizado : ${autorizado}">
+                <td th:text="${autorizado.CEDULAAUTORIZADO}"></td>
+                <td th:text="${autorizado.NOMBREAUTORIZADO}"></td>
+                <td th:text="${autorizado.PRIMERAPELLIDOAUTORIZADO}"></td>
+                <td th:text="${autorizado.SEGUNDOAPELLIDOAUTORIZADO}"></td>
+                <td th:text="${autorizado.DIRECCION}"></td>
+                <td th:text="${autorizado.TELEFONO}"></td>
+                <td th:text="${autorizado.RESPONSABLEPAGO}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
