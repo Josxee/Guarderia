@@ -1,235 +1,67 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 <html>
-    <head>
-        <title>Página de inicio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Bienvenido a Bilingual Kids</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ECF1F5;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
 
-        <link rel="stylesheet" href="css/estilos.css"/>
-        <!-- Agrega los enlaces a los archivos CSS de Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        .centered-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 150px); /* Ajusta el valor para un espacio mínimo entre contenido y pie de página */
+        }
 
-        <style>
-            body {
-                background-color: #ECF1F5;
-            }
+        .jumbotron {
+            background-color: #17a2b8;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
 
-            .card {
-                border: none;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: box-shadow 0.3s ease-in-out;
-            }
+        .btn-primary {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
 
-            .card:hover {
-                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-            }
+        .btn-primary:hover {
+            background-color: #138496;
+            border-color: #138496;
+        }
 
-            .card-title {
-                font-size: 1.2rem;
-                font-weight: bold;
-                margin-bottom: 1rem;
-            }
+        .centered-image {
+            max-width: 100%;
+            height: auto;
+        }
 
-            .card-body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
+        .boton {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h1 class="display-4">¡Bienvenido a Bilingual Kids!</h1>
+        <p class="lead">Tu lugar ideal para el cuidado y aprendizaje de tus hijos.</p>
+    </div>
 
-            .card-link {
-                margin-top: 1rem;
-                background-color:#17a2b8;
-                color: #FFFFFF;
-                border: none;
-                padding: 10px 20px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                border-radius: 5px;
-                overflow: hidden;
-                position: relative;
-                z-index: 1;
-            }
-
-            .card-link:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background-color: #AAE1E9;
-                left: 0;
-                top: 0;
-                z-index: -1;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .card-link:hover:before {
-                transform: translateX(0);
-            }
-            .card-link:hover {
-                color: #FFFFFF;
-            }
-        </style>
-    </head>
-    <body>
-        <header > 
-            <div class="bg-info py-4">
-                <h1 class="site-name text-white">Guardería Bilingual Kids</h1>
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Menú
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/ninos">Niños</a></li>
-                                    <li><a class="dropdown-item" href="/autorizaciones">Autorizaciones</a></li>
-                                    <li><a class="dropdown-item" href="/autorizados">Autorizados</a></li>
-                                    <li><a class="dropdown-item" href="/pagos">Pagos</a></li>
-                                    <li><a class="dropdown-item" href="/menus">Menú</a></li>
-                                    <li><a class="dropdown-item" href="/platos">Plato</a></li>
-                                    <li><a class="dropdown-item" href="/ingredientes">Ingredientes</a></li>
-                                    <li><a class="dropdown-item" href="/platoIngredientes">Plato Ingredientes</a></li>
-                                    <li><a class="dropdown-item" href="/menuPlato">Menú Plato</a></li>
-                                    <li><a class="dropdown-item" href="/alergia">Alergia</a></li>
-                                    <li><a class="dropdown-item" href="/consumos">Consumos</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="container">
-            <h1 class="mt-5">Bienvenido a la página de inicio</h1>
-
-            <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Niños</h5>
-                            <a href="/ninos" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Autorizaciones</h5>
-                            <a href="/autorizaciones" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Autorizados</h5>
-                            <a href="/autorizados" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Pagos</h5>
-                            <a href="/pagos" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Menú</h5>
-                            <a href="/menus" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Plato</h5>
-                            <a href="/platos" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Ingredientes</h5>
-                            <a href="/ingredientes" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Plato Ingredientes</h5>
-                            <a href="/platoIngredientes" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Menú Plato</h5>
-                            <a href="/menuPlato" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Alergia</h5>
-                            <a href="/alergia" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Consumos</h5>
-                            <a href="/consumos" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Tipo Plato</h5>
-                            <a href="/tipoPlato" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Tipo Ingrediente</h5>
-                            <a href="/tipoingrediente" class="card-link">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="centered-content">
+            <img src="img.jpg" alt="Guardería Bilingual Kids" class="centered-image">
+            <a class="btn btn-primary btn-lg boton" href="admin.html" role="button">Ingresar como Administrador</a>
         </div>
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
-
-
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
